@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>List of Tweets</title>
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+    <div id="app">
+    <div class="view">
+      <button :class="[ user_type === 'all' ? 'selected' : '']" @click="update_source('Njega ruku')">Njega ruku</button>
+      <button :class="[ user_type === 'friend' ? 'selected' : '']" @click="update_source('Njega stopala')">Njega stopala</button>
+      <button :class="[ user_type === 'friend' ? 'selected' : '']" @click="update_source('Threading (depilacija koncem)')">Threading (depilacija koncem)</button>
+    </div>
+    <tweet-component v-for="tweet in tweets" :tweet="tweet" v-if="(tweet.user_type === user_type) || (user_type === 'all')"/>
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+
+  
+
+    <script src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
