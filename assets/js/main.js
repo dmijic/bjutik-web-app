@@ -39,13 +39,15 @@
 })(jQuery);
 
 		// Modal
-		function closeModal(idString) {
-			console.log(idString);
-			var id = "'#"+idString+"'";
-			document.getElementById(id).classList.add("modal-hidden");
-		}
-		function openModal(idString) {
-			console.log(idString);
-			var id = "'#"+idString+"'";
+		function openModal(id) {
 			document.getElementById(id).classList.remove("modal-hidden");
+			document.querySelector("body").classList.add("modal-open");
 		}
+		
+		function closeModal(id) {
+			document.getElementById(id).classList.add("modal-hidden");
+			document.querySelector("body").classList.remove("modal-open");
+		}
+		document.getElementById("modal-close_btn").addEventListener("click", function(event){
+			event.preventDefault()
+		  });
