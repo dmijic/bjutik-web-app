@@ -16,11 +16,12 @@
 <body>
 
     <div id="app">
+      <div class="pricelist-header"></div>
     <div class="view">
       <button :class="[ user_type === 'all' ? 'selected' : '']" @click="update_source('all')">Sve usluge</button>
       <button :class="[ user_type === 'Njega ruku' ? 'selected' : '']" @click="update_source('Njega ruku')">Njega ruku</button>
       <button :class="[ user_type === 'Njega stopala' ? 'selected' : '']" @click="update_source('Njega stopala')">Njega stopala</button>
-      <button :class="[ user_type === 'Threading (depilacija koncem)' ? 'selected' : '']" @click="update_source('Threading (depilacija koncem)')">Threading (depilacija koncem)</button>
+      <button :class="[ user_type === 'Threading (depilacija koncem)' ? 'selected' : '']" @click="update_source('Threading (depilacija koncem)')">Threading <br>(depilacija koncem)</button>
     </div>
     <div class="tweet-wrapper">
     <tweet-component v-for="tweet in tweets" :tweet="tweet" v-if="(tweet.user_type === user_type) || (user_type === 'all')"/>
