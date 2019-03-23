@@ -51,3 +51,42 @@
 		document.getElementById("modal-close_btn").addEventListener("click", function(event){
 			event.preventDefault()
 		  });
+
+		  // Navbar
+
+		  window.onscroll = function() {setStickyNav()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function setStickyNav() {
+  if (window.pageYOffset >= sticky) {
+		navbar.classList.add("sticky");
+  } else {
+		navbar.classList.remove("sticky");
+  }
+}
+
+// Home and Pricelist toggle
+
+function showPricelist() {
+	document.querySelector(".homeView").classList.add("section-hidden");
+	document.querySelector(".pricelistView").classList.remove("section-hidden");
+	document.querySelector("#navBtnHome").classList.remove("active");
+	document.querySelector("#navBtnPricelist").classList.add("active");	
+	document.querySelector("#heroImg").classList.add("section-hidden");
+	document.querySelector("#header").classList.add("section-hidden");
+	navbar.classList.add("sticky-top");
+}
+function showHome() {
+	document.querySelector(".homeView").classList.remove("section-hidden");
+	document.querySelector(".pricelistView").classList.add("section-hidden");
+	document.querySelector("#navBtnHome").classList.add("active");
+	document.querySelector("#navBtnPricelist").classList.remove("active");
+	document.querySelector("#heroImg").classList.remove("section-hidden");
+	document.querySelector("#header").classList.remove("section-hidden");
+	navbar.classList.remove("sticky-top");
+}
+document.getElementById("navBtnHome").addEventListener("click", function(event){
+	event.preventDefault()
+  });

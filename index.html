@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="pricelist-app/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link rel="icon" type="image/png" href="images/favicon.png">
 
@@ -16,16 +17,28 @@
 				<div class="logo"><img src="images/logo.png" alt="Bjutik studio" width="300px"></a></div>
 			</header>
 
+			<div class="image fit flush" id="heroImg">
+				<img src="images/header-img-1.jpg" alt="" />
+			</div>
+
+			<!-- Navbar -->
+			<div id="navbar" class="navbar">
+				<section id="main">
+					<div class="inner no-shadow">
+						<a class="active" id="navBtnHome" href="#" onclick="showHome()">Home</a>
+						<a href="#top-align" id="navBtnPricelist" onclick="showPricelist()">Cjenik</a>
+					</div>
+		</section>
+	</div>
+
 		<!-- Main -->
-			<section id="main">
+			<section id="main" class="homeView">
 				<div class="inner">
 
 				<!-- One -->
 					<section id="one" class="wrapper style1">
 
-						<div class="image fit flush">
-							<img src="images/pic02.jpg" alt="" />
-						</div>
+						
 						<header class="special">
 							<h2>Fringilla Fermentum Tellus</h2>
 							<p>vehicula urna sed justo bibendum</p>
@@ -46,22 +59,22 @@
 							<div class="gallery">
 								<div>
 									<div class="image fit flush">
-										<a href="images/pic03.jpg"><img src="images/pic03.jpg" alt="" /></a>
+										<a href="images/images-working/IMG_20181120_193549.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-1.jpg" alt="" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image fit flush">
-										<a href="images/pic01.jpg"><img src="images/pic01.jpg" alt="" /></a>
+										<a href="images/bjutik-gallery-2.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-2.jpg" alt="" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image fit flush">
-										<a href="images/pic04.jpg"><img src="images/pic04.jpg" alt="" /></a>
+										<a href="images/bjutik-gallery-3.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-3.jpg" alt="" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image fit flush">
-										<a href="images/pic05.jpg"><img src="images/pic05.jpg" alt="" /></a>
+										<a href="images/bjutik-gallery-4.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-4.jpg" alt="" /></a>
 									</div>
 								</div>
 							</div>
@@ -123,6 +136,22 @@
 							</div>
 					</section>
 
+					<!-- Pricelist -->
+
+					<section id="pricelist" class="wrapper style1">
+
+						<div class="image fit flush">
+							<img src="images/pic02.jpg" alt="" />
+						</div>
+						<header class="special">
+							<h2>Cjenik usluga</h2>
+							<p>Provjerite cijene nasih usluga</p>
+						</header>
+						<div class="centered">
+						<button onclick="window.location.href='pricelist-app-left-menu/index.html'">Otvorite cjenik</button>
+						</div>
+					</section>
+
 					<!-- Four -->
 					<section id="four" class="wrapper">
 						<h1>Gdje smo?</h1>
@@ -154,6 +183,37 @@
 							</div>
 						</div>
 					</section>
+
+				</div>
+			</section>
+
+		<!-- Pricelist -->
+
+		<section id="main" class="pricelistView section-hidden">
+				<div class="inner">
+
+				<!-- Pricelist -->
+
+				<span id="top-align"></span>
+
+
+				<div id="app">
+
+				<div id="navbarPriceList" class="navbar sticky-pricelist">
+					<section id="main">
+						<div class="inner no-shadow">
+								<a :class="[ category === 'Njega ruku' ? 'selected' : '']" @click="update_source('Njega ruku')" href="#top-align">Njega ruku</a>
+								<a :class="[ category === 'Njega stopala' ? 'selected' : '']" @click="update_source('Njega stopala')" href="#top-align">Njega stopala</a>
+								<a :class="[ category === 'Threading (depilacija koncem)' ? 'selected' : '']" @click="update_source('Threading (depilacija koncem)')" href="#top-align">Threading</a>
+								<a :class="[ category === 'all' ? 'selected' : '']" @click="update_source('all')" href="#top-align">Sve usluge</a>
+						</div>
+					</section>
+				</div>
+
+					  <div class="pricelist-wrapper">
+					  <pricelist-component v-for="pricelist_item in pricelist_items" :pricelist_item="pricelist_item" v-if="(pricelist_item.category === category) || (category === 'all')"/>
+					</div>
+					</div>
 
 				</div>
 			</section>
@@ -195,6 +255,8 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src='pricelist-app/js/vue.js'></script>
+			<script src="pricelist-app/js/app.js"></script>
 
 	</body>
 </html>
