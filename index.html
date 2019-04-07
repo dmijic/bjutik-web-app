@@ -14,18 +14,24 @@
 
 		<!-- Header -->
 			<header id="header">
-				<div class="logo"><img src="images/logo.png" alt="Bjutik studio" width="300px"></a></div>
 			</header>
 
-			<div class="image fit flush" id="heroImg">
-				<img src="images/header-img-1.jpg" alt="" />
-			</div>
+			<div class="hero-image">
+					<div class="hero-text">
+						<div class="logo"><img src="images/logo.png" alt="Bjutik studio" width="300px"></div>
+						<h3>Studio ljepote</h3>
+						  <button>Gdje smo?</button>
+						  <button>Sto radimo?</button>
+						  	<button>Cjenik?</button>
+
+					</div>
+				  </div>
 
 			<!-- Navbar -->
 			<div id="navbar" class="navbar">
 				<section id="main">
 					<div class="inner no-shadow">
-						<a class="active" id="navBtnHome" href="#" onclick="showHome()">Home</a>
+						<a class="active" id="navBtnHome" href="#" onclick="showHome()">Naslovna</a>
 						<a href="#top-align" id="navBtnPricelist" onclick="showPricelist()">Cjenik</a>
 					</div>
 		</section>
@@ -52,8 +58,8 @@
 				<!-- Two -->
 					<section id="two" class="wrapper style2">
 						<header>
-							<h2>Vestibulum Convallis</h2>
-							<p>vehicula urna sed justo bibendum</p>
+							<h2>Fotografije radova</h2>
+							<p>pogledajte kako izgledaju nasi radovi</p>
 						</header>
 						<div class="content">
 							<div class="gallery">
@@ -85,7 +91,7 @@
 					<section id="three" class="wrapper">
 						<h1>Usluge</h1>
 						<div class="spotlight">
-							<div class="image flush"><img src="images/pic06.jpg" alt="" /></div>
+							<div class="image flush"><img src="images/bjutik-njega-ruku.jpg" alt="" /></div>
 							<div class="inner">
 								<h3>Njega ruku</h3>
 								<p>U Bjutiku stavljamo veliki naglasak na njegovane ruke i zdrave nokte. Na Vama je samo da odaberete želite li klasičnu manikuru i lakiranje noktiju ili trajni lak. Obje usluge mogu se kombinirati s tretmanom (IBX system) za oporavak noktiju oštećenih prilikom nepravilnog skidanja gela ili trajnog laka, grube i nestručne manikure ili jednostavno noktiju sklonih listanju.</p>
@@ -95,7 +101,7 @@
 
 							<div class="modal modal-hidden" id="njega-ruku">
 								<div class="modal-container">
-									<a class="modal-close" href="#" id="modal-close_btn" onclick="closeModal('njega-ruku')"></a>
+									<a class="modal-close" href="#" id="njega-ruku-modal-close_btn" onclick="closeModal('njega-ruku')"></a>
 								<h2>Njega ruku</h2>
 								<p>U Bjutiku stavljamo veliki naglasak na njegovane ruke i zdrave nokte. Na Vama je samo da odaberete želite li klasičnu manikuru i lakiranje noktiju ili trajni lak. Obje usluge mogu se kombinirati s tretmanom (IBX system) za oporavak noktiju oštećenih prilikom nepravilnog skidanja gela ili trajnog laka, grube i nestručne manikure ili jednostavno noktiju sklonih listanju. IBX system u kombinaciji s organskim Dadi’ Oil uljem kojeg dobijete prilikom prvog IBX tretmana pomaže Vam da njegujete svoje nokte i kožu i kod kuće.</p>
 										
@@ -107,17 +113,43 @@
 							</div>
 						</div>
 						<div class="spotlight alt">
-							<div class="image flush"><img src="images/pic07.jpg" alt="" /></div>
+							<div class="image flush"><img src="images/bjutik-njega-nogu.jpg" alt="" /></div>
 							<div  class="inner">
 								<h3>Curabitur Eget</h3>
 								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+								<button id="modal_button" onclick="openModal('njega-nogu')">Saznajte vise</button>
+							</div>
+							<div class="modal modal-hidden" id="njega-nogu">
+								<div class="modal-container">
+									<a class="modal-close" href="#" id="njega-nogu-modal-close_btn" onclick="closeModal('njega-nogu')"></a>
+								<h2>Njega nogu</h2>
+								<p>U Bjutiku stavljamo veliki naglasak na njegovane ruke i zdrave nokte. Na Vama je samo da odaberete želite li klasičnu manikuru i lakiranje noktiju ili trajni lak. Obje usluge mogu se kombinirati s tretmanom (IBX system) za oporavak noktiju oštećenih prilikom nepravilnog skidanja gela ili trajnog laka, grube i nestručne manikure ili jednostavno noktiju sklonih listanju. IBX system u kombinaciji s organskim Dadi’ Oil uljem kojeg dobijete prilikom prvog IBX tretmana pomaže Vam da njegujete svoje nokte i kožu i kod kuće.</p>
+										
+								<p>Brandovi koji se koriste u radu su OPI i CND SHELLAC™ trajni lakovi, CND Creative Play, CND Vinylux te OPI  lakovi za nokte.
+								Tretman možete obogatiti pilingom i maskom za ruke brazilskog proizvođača NK Cosmetics čiji su prirodni sastojci jednako blagotvorni prema Vama, ali i prema prirodi.</p>
+										
+								<p>Vrhunski proizvodi, iskustvo i stručnost u izvođenju tretmana osiguravaju Vam zadovoljstvo i opuštanje.</p>							
+							</div>
 							</div>
 						</div>
 						<div class="spotlight">
-							<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
+							<div class="image flush"><img src="images/bjutik-ugradnja-trepavica.jpg" alt="" /></div>
 							<div class="inner">
 								<h3>Morbi Eleifend</h3>
 								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+								<button id="modal_button" onclick="openModal('ugradnja-trepavica')">Saznajte vise</button>
+							</div>
+							<div class="modal modal-hidden" id="ugradnja-trepavica">
+								<div class="modal-container">
+									<a class="modal-close" href="#" id="ugradnja-trepavica-modal-close_btn" onclick="closeModal('ugradnja-trepavica')"></a>
+								<h2>Njega ruku</h2>
+								<p>U Bjutiku stavljamo veliki naglasak na njegovane ruke i zdrave nokte. Na Vama je samo da odaberete želite li klasičnu manikuru i lakiranje noktiju ili trajni lak. Obje usluge mogu se kombinirati s tretmanom (IBX system) za oporavak noktiju oštećenih prilikom nepravilnog skidanja gela ili trajnog laka, grube i nestručne manikure ili jednostavno noktiju sklonih listanju. IBX system u kombinaciji s organskim Dadi’ Oil uljem kojeg dobijete prilikom prvog IBX tretmana pomaže Vam da njegujete svoje nokte i kožu i kod kuće.</p>
+										
+								<p>Brandovi koji se koriste u radu su OPI i CND SHELLAC™ trajni lakovi, CND Creative Play, CND Vinylux te OPI  lakovi za nokte.
+								Tretman možete obogatiti pilingom i maskom za ruke brazilskog proizvođača NK Cosmetics čiji su prirodni sastojci jednako blagotvorni prema Vama, ali i prema prirodi.</p>
+										
+								<p>Vrhunski proizvodi, iskustvo i stručnost u izvođenju tretmana osiguravaju Vam zadovoljstvo i opuštanje.</p>							
+							</div>
 							</div>
 						</div>
 						<div class="spotlight alt">
@@ -125,6 +157,7 @@
 								<div  class="inner">
 									<h3>Curabitur Eget</h3>
 									<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+									<button id="modal_button" onclick="openModal('njega-ruku')">Saznajte vise</button>
 								</div>
 							</div>
 							<div class="spotlight">
@@ -132,28 +165,15 @@
 								<div class="inner">
 									<h3>Morbi Eleifend</h3>
 									<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+									<button id="modal_button" onclick="openModal('njega-ruku')">Saznajte vise</button>
 								</div>
 							</div>
 					</section>
 
-					<!-- Pricelist -->
 
-					<section id="pricelist" class="wrapper style1">
-
-						<div class="image fit flush">
-							<img src="images/pic02.jpg" alt="" />
-						</div>
-						<header class="special">
-							<h2>Cjenik usluga</h2>
-							<p>Provjerite cijene nasih usluga</p>
-						</header>
-						<div class="centered">
-						<button onclick="window.location.href='pricelist-app-left-menu/index.html'">Otvorite cjenik</button>
-						</div>
-					</section>
 
 					<!-- Four -->
-					<section id="four" class="wrapper">
+					<section id="four" class="wrapper ">
 						<h1>Gdje smo?</h1>
 						<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:EixTdHJvamFyc2thIGNlc3RhIDEwLCAxMDAwMCwgWmFncmViLCBIcnZhdHNrYQ&amp;key=AIzaSyA83Ny5k418vs1qoaSY3k1SQn9erfIWzHM" allowfullscreen=""></iframe>
 					</section>

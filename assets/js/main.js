@@ -42,15 +42,15 @@
 		function openModal(id) {
 			document.getElementById(id).classList.remove("modal-hidden");
 			document.querySelector("body").classList.add("modal-open");
+			document.getElementById(id+"-modal-close_btn").addEventListener("click", function(event){
+				event.preventDefault()
+			  });
 		}
 		
 		function closeModal(id) {
 			document.getElementById(id).classList.add("modal-hidden");
 			document.querySelector("body").classList.remove("modal-open");
 		}
-		document.getElementById("modal-close_btn").addEventListener("click", function(event){
-			event.preventDefault()
-		  });
 
 		  // Navbar
 
