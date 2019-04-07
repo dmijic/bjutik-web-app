@@ -2647,7 +2647,7 @@
 	h1 {
 		font-size: 2.25rem;
 		text-align: center;
-		margin: 3rem 0 2rem 0;
+		padding: 3rem 0 2rem 0;
 		text-transform: uppercase;
 		font-weight: 400;
 	}
@@ -2983,12 +2983,13 @@
 		z-index: 10001;
 	}
 
-		#header > .logo {
-			margin: 0 0 1rem 0;
-			padding: 0;
+		.logo {
+			margin: 10px auto;
+    		padding: 0;
+    		width: 300px;
 		}
 
-			#header > .logo a {
+			.logo a {
 				font-size: 4rem;
 				font-weight: 700;
 				color: #FFF;
@@ -2996,17 +2997,29 @@
 				line-height: 1rem;
 			}
 
-			#header > .logo span {
+			.logo span {
 				font-weight: 300;
 				font-size: 1rem;
 				display: block;
 				color: rgba(255, 255, 255, 0.65);
 			}
+			.hero-text h3 {
+				padding: 0 0 2rem 0!important;
+			}
+
+			#header > .hero-image > .hero-text button {
+				box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+			}
+
+			#header > .hero-image > .hero-text button:hover {
+				box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.35);
+			}
+
+
 
 	@media screen and (max-width: 1280px) {
 
 		body {
-			padding-top: 4rem;
 			background-attachment: scroll;
 			background-size: auto;
 			background-position: top;
@@ -3016,11 +3029,12 @@
 
 	@media screen and (max-width: 736px) {
 
-		#header > .logo {
+		.logo {
 			margin: 0 0 2rem 0;
+			width: 200px;
 		}
 
-			#header > .logo a {
+			.logo a {
 				font-size: 3rem;
 			}
 
@@ -3175,10 +3189,15 @@
 
 		}
 
+		.space {
+			width: 100%;
+			height: 100px;
+		}
+
 /* Footer */
 
 	#footer {
-		padding: 4rem 0 2rem 0 ;
+		padding: 6rem 0 2rem 0 ;
 		height: 100vh;
 		text-align: center;
 		background-color: #1e1f23;

@@ -74,7 +74,6 @@ function showPricelist() {
 	document.querySelector(".pricelistView").classList.remove("section-hidden");
 	document.querySelector("#navBtnHome").classList.remove("active");
 	document.querySelector("#navBtnPricelist").classList.add("active");	
-	document.querySelector("#heroImg").classList.add("section-hidden");
 	document.querySelector("#header").classList.add("section-hidden");
 	navbar.classList.add("sticky-top");
 }
@@ -83,7 +82,6 @@ function showHome() {
 	document.querySelector(".pricelistView").classList.add("section-hidden");
 	document.querySelector("#navBtnHome").classList.add("active");
 	document.querySelector("#navBtnPricelist").classList.remove("active");
-	document.querySelector("#heroImg").classList.remove("section-hidden");
 	document.querySelector("#header").classList.remove("section-hidden");
 	navbar.classList.remove("sticky-top");
 }
