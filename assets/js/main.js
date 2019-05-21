@@ -76,6 +76,8 @@ function showPricelist() {
 	document.querySelector("#navBtnPricelist").classList.add("active");	
 	document.querySelector("#header").classList.add("section-hidden");
 	navbar.classList.add("sticky-top");
+	document.getElementById("navbar").classList.remove('navbar-show');
+	menuIconBtn.toggleClass('menu-icon-active').toggleClass('menu-icon-not-active');
 }
 function showHome() {
 	document.querySelector(".homeView").classList.remove("section-hidden");
@@ -84,7 +86,57 @@ function showHome() {
 	document.querySelector("#navBtnPricelist").classList.remove("active");
 	document.querySelector("#header").classList.remove("section-hidden");
 	navbar.classList.remove("sticky-top");
+	document.getElementById("navbar").classList.remove('navbar-show');
+	menuIconBtn.toggleClass('menu-icon-active').toggleClass('menu-icon-not-active');
 }
 document.getElementById("navBtnHome").addEventListener("click", function(event){
 	event.preventDefault()
   });
+
+
+  // Floater
+
+  window.addEventListener("onScroll", showFloater());
+
+  function showFloater() {
+  document.querySelector("body").setAttribute("onscroll", "onScrollFunctions()");
+  var floater = document.getElementById("floater");
+  var slideIn = 200;
+	if (window.pageYOffset >= slideIn) {
+	floater.classList.add("floater-slide-in")
+	} else {
+	floater.classList.remove("floater-slide-in");
+	}
+  }
+  
+  function closeFloater() {
+	  document.getElementById("floater").classList.add("floater-hidden");
+  }
+
+
+  function onScrollFunctions() {
+	showFloater();
+	setStickyNav();
+  }
+
+
+    // Menu icon
+
+	var menuIconBtn = $('.main-menu-btn');
+	var menuIconBtnPricelist = $('.pricelist-menu-btn');
+
+menuIconBtn.on('click', function() {
+  $(this).toggleClass('menu-icon-active');
+  $(this).toggleClass('menu-icon-not-active');
+});
+
+menuIconBtnPricelist.on('click', function() {
+	$(this).toggleClass('menu-icon-active');
+	$(this).toggleClass('menu-icon-not-active');
+  });
+
+// Menu display
+
+function showMenu(id) {
+	document.getElementById(id).classList.toggle('navbar-show');
+}

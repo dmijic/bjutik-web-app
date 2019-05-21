@@ -4,6 +4,13 @@
 		<title>Bjutik studio ljepote</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="title" content="Bjutik studio ljepote">
+		<meta name="description" content="U Bjutiku stavljamo veliki naglasak na zdravlje noktiju ruku i nogu. Riješite se neželjenih dlačica s lica i tijela ili se opustite uz masažu.">
+		<meta name="keywords" content="njega ruku, njega stopala, manikura, pedikura, threading, lash lift, ugradnja trepavica, trepavice, depilacija, masaža, depilacija voskom, depilacija pastom, eyelash extensions, shellac, cosmetic pedicure, opi, dadi oil lash lift">
+		<meta name="robots" content="index, follow">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="Hrvatski">
+		<meta name="author" content="dmijic">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="pricelist-app/css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -30,29 +37,49 @@
 
 			<!-- Navbar -->
 			<div id="navbar" class="navbar">
-				<section id="main">
+
+					<div class="menu-icon-box">
+							<div class="menu-icon-btn menu-icon-not-active main-menu-btn" onclick="showMenu('navbar')">
+							  <span></span>
+							  <span></span>
+							  <span></span>
+							</div>
+						</div>
+				<section id="main-menu" class="main-menu menu-wrapper">
 					<div class="inner no-shadow">
-						<a class="active" id="navBtnHome" href="#" onclick="showHome()">Naslovna</a>
-						<a href="#top-align" id="navBtnPricelist" onclick="showPricelist()">Cjenik</a>
+						<div><a class="active" id="navBtnHome" href="#" onclick="showHome()">Naslovna</a></div>
+						<div><a href="#top-align" id="navBtnPricelist" onclick="showPricelist()">Cjenik</a></div>
 					</div>
 		</section>
 	</div>
 
+
+		<!-- Floater -->
+
+		<section class="floater" id="floater" v-if="specialOfferActive">
+				<div class="floater-content">	
+					<h3>Last minute 15% popusta na sve usluge. Pratite obavijesti na <a href="https://facebook.com/bjutikstudioljepote" target="_blank">facebook-u</a>.</h3>
+				</div>
+				<span class="floater-close" id="floaterClose" onclick="closeFloater()"></span>
+		</section>
+
 		<!-- Main -->
 			<section id="main" class="homeView">
 				<div class="inner">
+
+
 
 				<!-- One -->
 					<section class="wrapper style1">
 						<div id="one" class="space"></div>
 						
 						<header class="special">
-							<h2>Fringilla Fermentum Tellus</h2>
-							<p>vehicula urna sed justo bibendum</p>
+							<h2>Bjutik</h2>
+							<p>moj studio ljepote</p>
 						</header>
-						<div class="content">
-							<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel. Vestibulum et efficitur urna. Duis velit nulla, interdum sed felis sit amet, facilisis auctor nunc. Cras luctus urna at risus feugiat scelerisque nec sed diam. </p>
-							<p>Nunc fringilla metus odio, at rutrum augue tristique vel. Nulla ac tellus a neque ullamcorper porta a vitae ipsum. Morbi est sapien, hendrerit quis mi in, aliquam bibendum orci. Vestibulum imperdiet nibh vitae maximus posuere. Aenean sit amet nibh feugiat, condimentum tellus eu, malesuada nunc. Mauris ac pulvinar turpis, sit amet pharetra est. Ut bibendum justo condimentum, vehicula ex vel, venenatis libero. Etiam vehicula urna sed justo bibendum, ac lacinia nunc pulvinar. Integer nec velit orci. Vestibulum pellentesque varius dapibus. Morbi ullamcorper augue est, sed luctus orci fermentum dictum. Nunc tincidunt, nisl consequat convallis viverra, metus nisl ultricies dui, vitae dapibus ligula urna sit amet nibh. Duis ut venenatis enim.</p>
+						<div class="content" style="width: 63%; margin: 0 auto;">
+							<p style="text-align: center">Bjutik je nešto kao kozmetički salon. Ali nije baš klasični kozmetički salon. Mogu se obavit neke stvari kao u standardnom salonu samo puno zabavnije. I bolje. </p>
+							<p style="text-align: right">- Ana -</p>
 						</div>
 					</section>
 
@@ -60,29 +87,49 @@
 					<section class="wrapper style2">
 						<div id="two" class="space"></div>
 						<header>
-							<h2>Fotografije radova</h2>
-							<p>pogledajte kako izgledaju nasi radovi</p>
+							<h2>Iz Bjutik radionice</h2>
+							<p>pogledajte kako izgledaju nasi nokti</p>
 						</header>
 						<div class="content">
 							<div class="gallery">
 								<div>
 									<div class="image fit flush">
-										<a href="images/images-working/IMG_20181120_193549.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-1.jpg" alt="" /></a>
+										<a href="images/bjutik-gallery-1.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-1-tn.jpg" alt="bjutik manikura" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image fit flush">
-										<a href="images/bjutik-gallery-2.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-2.jpg" alt="" /></a>
+										<a href="images/bjutik-gallery-2.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-2-tn.jpg" alt="njegovani nokti" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image fit flush">
-										<a href="images/bjutik-gallery-3.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-3.jpg" alt="" /></a>
+										<a href="images/bjutik-gallery-3.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-3-tn.jpg" alt="briga o noktima" /></a>
 									</div>
 								</div>
 								<div>
 									<div class="image fit flush">
-										<a href="images/bjutik-gallery-4.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-4.jpg" alt="" /></a>
+										<a href="images/bjutik-gallery-4.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-4-tn.jpg" alt="bjutik trajni lak" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/bjutik-gallery-5.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-5-tn.jpg" alt="bjutik zdravi nokti" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/bjutik-gallery-6.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-6-tn.jpg" alt="bjutik lijepi nokti" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/bjutik-gallery-7.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-7-tn.jpg" alt="bjutik pedikura" /></a>
+									</div>
+								</div>
+								<div>
+									<div class="image fit flush">
+										<a href="images/bjutik-gallery-8.jpg"><img class="gallery-thumbnail" src="images/bjutik-gallery-8-tn.jpg" alt="njega stopala" /></a>
 									</div>
 								</div>
 							</div>
@@ -94,7 +141,7 @@
 						<div id="three" class="space"></div>
 						<h1>Usluge</h1>
 						<div class="spotlight">
-							<div class="image flush"><img src="images/bjutik-njega-ruku.jpg" alt="" /></div>
+							<div class="image flush"><img src="images/bjutik-njega-ruku.jpg" alt="njega ruku" /></div>
 							<div class="inner">
 								<h3>Njega ruku</h3>
 								<p>U Bjutiku stavljamo veliki naglasak na njegovane ruke i zdrave nokte. Na Vama je samo da odaberete želite li klasičnu manikuru i lakiranje noktiju ili trajni lak. Obje usluge mogu se kombinirati s tretmanom (IBX system) za oporavak noktiju oštećenih prilikom nepravilnog skidanja gela ili trajnog laka, grube i nestručne manikure ili jednostavno noktiju sklonih listanju.</p>
@@ -116,61 +163,132 @@
 							</div>
 						</div>
 						<div class="spotlight alt">
-							<div class="image flush"><img src="images/bjutik-njega-nogu.jpg" alt="" /></div>
+							<div class="image flush"><img src="images/bjutik-njega-nogu.jpg" alt="njega stopala" /></div>
 							<div  class="inner">
-								<h3>Curabitur Eget</h3>
-								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+								<h3>Njega stopala</h3>
+								<p>Nose Vas čitav život, a Vi ne brinete o njima?<br>
+									Zato smo tu. Pravilnom njegom i odličnim proizvodima oslobodili smo puno stopala od ispucalih peta i debelih natisaka. U ponudi Bjutika možete pronaći klasičnu pedikuru koju možete nadograditi NK Cosmetics pilingom i maskom za još bolje rezultate.
+									</p>
 								<button id="modal_button" onclick="openModal('njega-nogu')">Saznajte vise</button>
 							</div>
 							<div class="modal modal-hidden" id="njega-nogu">
 								<div class="modal-container">
 									<a class="modal-close" href="#" id="njega-nogu-modal-close_btn" onclick="closeModal('njega-nogu')"></a>
-								<h2>Njega nogu</h2>
-								<p>U Bjutiku stavljamo veliki naglasak na njegovane ruke i zdrave nokte. Na Vama je samo da odaberete želite li klasičnu manikuru i lakiranje noktiju ili trajni lak. Obje usluge mogu se kombinirati s tretmanom (IBX system) za oporavak noktiju oštećenih prilikom nepravilnog skidanja gela ili trajnog laka, grube i nestručne manikure ili jednostavno noktiju sklonih listanju. IBX system u kombinaciji s organskim Dadi’ Oil uljem kojeg dobijete prilikom prvog IBX tretmana pomaže Vam da njegujete svoje nokte i kožu i kod kuće.</p>
+								<h2>Njega stopala</h2>
+								<p>Nose Vas čitav život, a Vi ne brinete o njima?
+									Zato smo tu. Pravilnom njegom i odličnim proizvodima oslobodili smo puno stopala od ispucalih peta i debelih natisaka. U ponudi Bjutika možete pronaći klasičnu pedikuru koju možete nadograditi NK Cosmetics pilingom i maskom za još bolje rezultate. 
+									
+									
+									</p>
 										
-								<p>Brandovi koji se koriste u radu su OPI i CND SHELLAC™ trajni lakovi, CND Creative Play, CND Vinylux te OPI  lakovi za nokte.
-								Tretman možete obogatiti pilingom i maskom za ruke brazilskog proizvođača NK Cosmetics čiji su prirodni sastojci jednako blagotvorni prema Vama, ali i prema prirodi.</p>
+								<p>Za manje zahtjevna stopala Bjutik nudi uslugu i parcijalne pedikure koje uključuje uređivanje noktiju i lakiranje ili samo obrada zadebljanja na stopalima.
+									
+									</p>
 										
-								<p>Vrhunski proizvodi, iskustvo i stručnost u izvođenju tretmana osiguravaju Vam zadovoljstvo i opuštanje.</p>							
+								<p>Možete nam se obratiti i ukoliko imate poteškoća s gljivičnim oboljenjima nokta, uraslim noktima ili oštečenim živcem prilikom čega Vam nokat više ne raste.U takvim situacijama koristi se LCN Pedique gel kojim možemo napraviti kompletnu rekonstrukciju Vašeg nokta. Gel je otporan i čvrst, a ujedno visoko fleksibilan što ga čini savršenim za pokrete stopala i pritiske koje nokti i stopala podnose kroz čitav dan u zatvorenoj obući. Sadrži ione srebra koji imaju dokazani antimikotički učinak.</p>							
 							</div>
 							</div>
 						</div>
 						<div class="spotlight">
-							<div class="image flush"><img src="images/bjutik-ugradnja-trepavica.jpg" alt="" /></div>
+							<div class="image flush"><img src="images/bjutik-threading.jpg" alt="bjutik threading" /></div>
 							<div class="inner">
-								<h3>Morbi Eleifend</h3>
-								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
-								<button id="modal_button" onclick="openModal('ugradnja-trepavica')">Saznajte vise</button>
+								<h3>Threading</h3>
+								<p>Obrve su okvir lica, slažete se? Mi to svakako mislimo i zato je velika pažnja prilikom dizajna obrva posvećena upravo odabiru pravilnog oblika i boje, u konzultaciji s klijenticom. 
+									
+									</p>
+								<button id="modal_button" onclick="openModal('threading')">Saznajte vise</button>
 							</div>
-							<div class="modal modal-hidden" id="ugradnja-trepavica">
+							<div class="modal modal-hidden" id="threading">
 								<div class="modal-container">
-									<a class="modal-close" href="#" id="ugradnja-trepavica-modal-close_btn" onclick="closeModal('ugradnja-trepavica')"></a>
-								<h2>Njega ruku</h2>
-								<p>U Bjutiku stavljamo veliki naglasak na njegovane ruke i zdrave nokte. Na Vama je samo da odaberete želite li klasičnu manikuru i lakiranje noktiju ili trajni lak. Obje usluge mogu se kombinirati s tretmanom (IBX system) za oporavak noktiju oštećenih prilikom nepravilnog skidanja gela ili trajnog laka, grube i nestručne manikure ili jednostavno noktiju sklonih listanju. IBX system u kombinaciji s organskim Dadi’ Oil uljem kojeg dobijete prilikom prvog IBX tretmana pomaže Vam da njegujete svoje nokte i kožu i kod kuće.</p>
-										
-								<p>Brandovi koji se koriste u radu su OPI i CND SHELLAC™ trajni lakovi, CND Creative Play, CND Vinylux te OPI  lakovi za nokte.
-								Tretman možete obogatiti pilingom i maskom za ruke brazilskog proizvođača NK Cosmetics čiji su prirodni sastojci jednako blagotvorni prema Vama, ali i prema prirodi.</p>
-										
-								<p>Vrhunski proizvodi, iskustvo i stručnost u izvođenju tretmana osiguravaju Vam zadovoljstvo i opuštanje.</p>							
+									<a class="modal-close" href="#" id="threading-modal-close_btn" onclick="closeModal('threading')"></a>
+								<h2>Threading</h2>
+								<p>Obrve su okvir lica, slažete se? Mi to svakako mislimo i zato je velika pažnja prilikom dizajna obrva posvećena upravo odabiru pravilnog oblika i boje, u konzultaciji s klijenticom. 
+									Riješite se svih neželjenih dlačica s lica ovom poznatom indijskom metodom čupanja koncem. Za razliku od voska, konac ne oštećuje kožu, ne trga dlačice, čupa ih iz korijena i ostavlja glatku kožu. Crvenilo se brzo povlači, ali svakako savjetujemo da ne stavljate šminku neposredno nakon tretmana kako bi izbjegli neželjene reakcije.
+									</p>
+						
 							</div>
 							</div>
 						</div>
 						<div class="spotlight alt">
-								<div class="image flush"><img src="images/pic07.jpg" alt="" /></div>
+								<div class="image flush"><img src="images/bjutik-trepavice.jpg" alt="bjutik ugradnja trepavica" /></div>
 								<div  class="inner">
-									<h3>Curabitur Eget</h3>
-									<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
-									<button id="modal_button" onclick="openModal('njega-ruku')">Saznajte vise</button>
+									<h3>Trepavice</h3>
+									<p>Ne sviđaju Vam se ekstenzije trepavica jer je Vaša prijateljica imala metle na očima ili su trepavice još više spustile kapak? 
+										Nažalost, nestručnost lash artista i neupućenost klijentica rezultira nezadovoljstvom, razočarenjem, oštećenim trepavicama i negativnim konotacijama čim pomislite na ekstenzije trepavica.
+										</p>
+									<button id="modal_button" onclick="openModal('ugradnja-trepavica')">Saznajte vise</button>
+								</div>
+								<div class="modal modal-hidden" id="ugradnja-trepavica">
+									<div class="modal-container">
+										<a class="modal-close" href="#" id="ugradnja-trepavica-modal-close_btn" onclick="closeModal('ugradnja-trepavica')"></a>
+									<h2>Trepavice</h2>
+									<p>Ne sviđaju Vam se ekstenzije trepavica jer je Vaša prijateljica imala metle na očima ili su trepavice još više spustile kapak? 
+										Nažalost, nestručnost lash artista i neupućenost klijentica rezultira nezadovoljstvom, razočarenjem, oštećenim trepavicama i negativnim konotacijama čim pomislite na ekstenzije trepavica.
+										</p>
+										<p>Ugradnja ekstenzija uključuje duže konzultacije s klijenticom, odabir idealnog oblika i dužine ekstenzija koje oko i trepavice dopuštaju. Ekstenzije su lagane, prozračne, ne smetaju. Na Vama je da se odlučite preferirate li klasičnu ugradnju ili ruski volumen (poznat i kao 3D, 4D...).
+
+											</p>
+											<p>Industrija ekstenzija trepavica je brzorastuća te time puna noviteta. Redovitim pohađanjem edukacija osiguravamo najveću sigurnost za Vaše oko i trepavice i možete nam se obratiti s punim povjerenjem. I dođite umorne, volimo kada spavate na tretmanu.
+
+												</p>
+												<p>Ukoliko Vam se ne sviđa izgled ekstenzija, a trepavice su Vam tužne i ravne, uvijek se možete odlučiti na opciju uvijanja prirodnih trepavica, lash lift / laminacija, čiji efekt traje otprilike 6 tjedana. Prirodne trepavice se podižu, uvijaju, bojaju i hrane keratinom, Vi samo odmarate.
+
+													</p>
+							
+								</div>
 								</div>
 							</div>
+
+
 							<div class="spotlight">
-								<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
+								<div class="image flush"><img src="images/bjutik-depilacija.jpg" alt="bjutik depilacija" /></div>
 								<div class="inner">
-									<h3>Morbi Eleifend</h3>
-									<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
-									<button id="modal_button" onclick="openModal('njega-ruku')">Saznajte vise</button>
+									<h3>Depilacija</h3>
+									<p>Naručili ste se na brazilku nakon posla, ali Vam je neugodno jer se niste otuširali? Ne brinite, u intimnoj atmosferi salona možete i skoknuti pod tuš prije, a po želji i nakon depilacije ako npr jurite u grad na kavu.
+
+										</p>
+									<button id="modal_button" onclick="openModal('depilacija')">Saznajte vise</button>
+								</div>
+								<div class="modal modal-hidden" id="depilacija">
+									<div class="modal-container">
+										<a class="modal-close" href="#" id="depilacija-modal-close_btn" onclick="closeModal('depilacija')"></a>
+									<h2>Depilacija</h2>
+									<p>Naručili ste se na brazilku nakon posla, ali Vam je neugodno jer se niste otuširali? Ne brinite, u intimnoj atmosferi salona možete i skoknuti pod tuš prije, a po želji i nakon depilacije ako npr jurite u grad na kavu.<br>
+										U ponudi imamo depilaciju hladnim voskom te šećernom pastom. 
+										
+										</p>
+							
+								</div>
 								</div>
 							</div>
+
+							<div class="spotlight alt">
+								<div class="image flush"><img src="images/bjutik-masaza.jpg" alt="masaža" /></div>
+								<div  class="inner">
+									<h3>Masaza</h3>
+									<p>Sredili ste nokte na rukama, stopala, riješili se neželjenih dlačica i sada bi Vam tako dobro došla masaža za kraj dana.
+
+										</p>
+									<button id="modal_button" onclick="openModal('masaza')">Saznajte vise</button>
+								</div>
+								<div class="modal modal-hidden" id="masaza">
+									<div class="modal-container">
+										<a class="modal-close" href="#" id="masaza-modal-close_btn" onclick="closeModal('masaza')"></a>
+									<h2>Masaza</h2>
+									<p>Sredili ste nokte na rukama, stopala, riješili se neželjenih dlačica i sada bi Vam tako dobro došla masaža za kraj dana.
+
+										</p>
+										<p>Klasična masaža uklanja napetost vrata, ramenog pojasa i gornjeg dijela tijela. Riješite se napetosti uzrokovane  dugotrajnim sjedenjem, stajanjem, nepravilnim držanjem tijela, učestalim ponavljanjem jednog pokreta ili pozicije i naručite se na željeni tretman.
+											</p>
+											<p>Sportska masaža pomoći će  tijelu da se brže oporavi od tjelesnih napora ubrzavajući izlučivanje mliječne kiseline koja je normalan fiziološki produkt rada mišića. 
+												</p>
+												<p>U Bjutiku  možete pripremiti svoje tijelo i anticelulitnom masažom i riješiti se neželjenog izgleda narančine kože. Masaža se provodi anticelulitnim uljem čiji sastojci pomažu u razgradnji masnoća, aktiviraju rad limfnog sustava i pospješuju uklanjanje otrova iz tijela.
+													</p>
+							
+								</div>
+								</div>
+							</div>
+
 					</section>
 
 
@@ -185,26 +303,27 @@
 					<!-- Five -->
 					<section class="wrapper">
 						<div id="five" class="space"></div>
-						<h1>Zanji section sa necim kul</h1>
+						<h1>Objave s bloga</h1>
 						<div class="spotlight">
 							<div class="image flush"><img src="images/pic06.jpg" alt="" /></div>
 							<div class="inner">
-								<h3>Viverra Hendrerit</h3>
-								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+								<h3>Kako sacuvati svoje nokte?</h3>
+								<p>Koliko puta vam se dogodilo da ste dosle doma iz Bjutika, krenule nesto raditi i... bam... ode nokat. I sad izgledate kao jeftina seljanka, a iduci termin je tek za tri tjedna. <a href="">Vise...</a> </p>
 							</div>
 						</div>
 						<div class="spotlight alt">
 							<div class="image flush"><img src="images/pic07.jpg" alt="" /></div>
 							<div  class="inner">
-								<h3>Curabitur Eget</h3>
-								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+								<h3>Sto mi je to na noznom palcu?</h3>
+								<p>Sve izgleda super kad je gore Big Apple Red ili Music is My Muse od OPI-ja, ali kad je nokat gol, izgleda kao da vam je netko prolio klorovodicnu kiselinu po nogama. Ovo je mozda znak da je vasem noktu potreban Bjutik SOS tretman. <a href="">Vise...</a>
+								</p>
 							</div>
 						</div>
 						<div class="spotlight">
 							<div class="image flush"><img src="images/pic08.jpg" alt="" /></div>
 							<div class="inner">
-								<h3>Morbi Eleifend</h3>
-								<p>Curabitur eget semper ante. Morbi eleifend ultricies est, a blandit diam vehicula vel. Vestibulum porttitor nisi quis viverra hendrerit. Suspendisse vel volutpat nibh, vel elementum lacus. Maecenas commodo pulvinar dui, at cursus metus imperdiet vel.</p>
+								<h3>Kako odabrati svoju boju?</h3>
+								<p>Vise puta vam se dogodilo da sam vam okretala ocima dok ste 15 minuta birale boju </p>
 							</div>
 						</div>
 					</section>
@@ -214,9 +333,8 @@
 
 		<!-- Pricelist -->
 
-		<section id="main" class="pricelistView section-hidden">
+		<section id="pricelist-menu" class="pricelistView section-hidden">
 				<div class="inner">
-
 				<!-- Pricelist -->
 
 				<span id="top-align"></span>
@@ -224,12 +342,23 @@
 
 				<div id="app">
 
-				<div id="navbarPriceList" class="navbar sticky-pricelist">
-					<section id="main">
-						<div class="inner no-shadow">
+				<div id="navbarPriceList" class="navbar sticky-pricelist" onclick="showMenu('navbarPriceList')">
+						<div class="menu-icon-box menu-icon-box-pricelist">
+								<img src="images/menu-icon.png">
+							</div>
+							
+					<section id="pricelist">
+						<div class="inner no-shadow menu-wrapper">
 								<a :class="[ category === 'Njega ruku' ? 'selected' : '']" @click="update_source('Njega ruku')" href="#top-align">Njega ruku</a>
 								<a :class="[ category === 'Njega stopala' ? 'selected' : '']" @click="update_source('Njega stopala')" href="#top-align">Njega stopala</a>
 								<a :class="[ category === 'Threading (depilacija koncem)' ? 'selected' : '']" @click="update_source('Threading (depilacija koncem)')" href="#top-align">Threading</a>
+								<a :class="[ category === 'Trepavice' ? 'selected' : '']" @click="update_source('Trepavice')" href="#top-align">Trepavice</a>
+								<a :class="[ category === 'Depilacija (hladni vosak)' ? 'selected' : '']" @click="update_source('Depilacija (hladni vosak)')" href="#top-align">Depilacija (hladni vosak)</a>
+								<a :class="[ category === 'Depilacija (šećerna pasta)' ? 'selected' : '']" @click="update_source('Depilacija (šećerna pasta)')" href="#top-align">Depilacija (šećerna pasta)</a>
+								<a :class="[ category === 'Masaža' ? 'selected' : '']" @click="update_source('Masaža')" href="#top-align">Masaža</a>
+								<a :class="[ category === 'Poklon kartice' ? 'selected' : '']" @click="update_source('Poklon kartice')" href="#top-align">Poklon kartice</a>
+								<a :class="[ category === 'Paketi' ? 'selected' : '']" @click="update_source('Paketi')" href="#top-align">Paketi</a>
+								<a :class="[ category === 'Propušteni termin' ? 'selected' : '']" @click="update_source('Propušteni termin')" href="#top-align">Propušteni termin</a>
 								<a :class="[ category === 'all' ? 'selected' : '']" @click="update_source('all')" href="#top-align">Sve usluge</a>
 						</div>
 					</section>
