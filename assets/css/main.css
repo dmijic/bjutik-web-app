@@ -62,7 +62,7 @@
 .hero-image {
 	background-image: url('../../images/header-img-1.jpg');
 	background-color: #cccccc;
-	height: 600px;
+	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -3345,7 +3345,6 @@
 		background-color: #fff;
 		z-index: 2000;
 		padding: 10px 0 0 0;
-		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 	  }
 	  
 	  .navbar a {
@@ -3372,6 +3371,7 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 	  }
 
 	  .sticky-pricelist {
@@ -3427,9 +3427,9 @@
 		border-radius: 10px;
 		-webkit-transition: all .5s;
 		transition: all .5s;
-		-webkit-box-shadow: -3px 3px 3px 0px rgba(0,0,0,0.25);
-		-moz-box-shadow: -3px 3px 3px 0px rgba(0,0,0,0.25);
-		box-shadow: -3px 3px 3px 0px rgba(0,0,0,0.25);
+		-webkit-box-shadow: 4px 6px 10px -2px rgba(0,0,0,0.45);
+		-moz-box-shadow: 4px 6px 10px -2px rgba(0,0,0,0.45);
+		box-shadow: 4px 6px 10px -2px rgba(0,0,0,0.45);
 	}
 	
 	.floater-content > h3 {
